@@ -11,4 +11,4 @@ ENV POSTGRES_DB "gossiper:1.0-db"
 VOLUME /var/lib/postgresql/data
 
 
-RUN --bind 0.0.0.0:PORT
+EXPOSE $PORT
