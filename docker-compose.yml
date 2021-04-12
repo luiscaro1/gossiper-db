@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    container_name: gossiper_DB
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: gossiper:1.0-db
+    volumes:
+      - ./db/pgdata:/var/lib/postgresql/data
+      - ./Schema.sql:/sql/Schema.sql
+    ports:
+      - "5432:5432"
