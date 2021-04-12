@@ -8,7 +8,7 @@ ENV POSTGRES_PASSWORD "postgres"
 ENV POSTGRES_USER "postgres"
 ENV POSTGRES_DB "gossiper:1.0-db"
 
-VOLUMES /var/lib/postgresql/data
+VOLUME /var/lib/postgresql/data
 
 
 RUN --bind 0.0.0.0:PORT
