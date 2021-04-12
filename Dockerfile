@@ -5,8 +5,8 @@ COPY addSchema.sh sql/
 WORKDIR sql/
 
 ENV POSTGRES_PASSWORD "postgres"
-POSTGRES_USER "postgres"
-POSTGRES_DB "gossiper:1.0-db"
+ENV POSTGRES_USER "postgres"
+ENV POSTGRES_DB "gossiper:1.0-db"
 
 VOLUMES /var/lib/postgresql/data
 
